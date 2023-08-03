@@ -30,3 +30,22 @@ Use React-transition-group to tackle this problem:
 
    It also can take some callback functions as props:
    ex :+OnEnter (also for other states also)
+
+We can also use CSSTansition from react-transition-group:
+
+2. Transition component takes some props:
+
+   - in: boolean = render elements depending on the given value
+
+   - timeout: number/object = for timing function
+     it can take numeric value or an object
+     ex { enter: 400, exit:100 }
+
+   - classNames: object = adds classnames from local css file and adds those to the wraped elements.
+
+     ex: classNames={{
+         enter:"",
+         enterActive: "ModalOpen",
+         exit: "",
+         exitActive:"ModalClosed"
+     }}
