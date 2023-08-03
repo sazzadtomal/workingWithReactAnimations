@@ -33,7 +33,7 @@ Use React-transition-group to tackle this problem:
 
 We can also use CSSTansition from react-transition-group:
 
-2. Transition component takes some props:
+2. CSSTransition component takes some props:
 
    - in: boolean = render elements depending on the given value
 
@@ -49,3 +49,19 @@ We can also use CSSTansition from react-transition-group:
          exit: "",
          exitActive:"ModalClosed"
      }}
+
+We can also use TransitionGroup Component for rendering list elements:
+
+1.  In case of TransitionGroup the "in" props is not required because it automaticly determines by the nature of the code to render dynamic components.
+    +it will have a "component: String" prop which will be rendered. /ex : component="ul"/
+
+2.  Every Dynamic components inside of the <TransitionGroup/> element must be wrapped by <Transition/> or <CSSTransition /> component.
+
+    +classNames: it can also be configured as giving a trunk name:
+    ex: <CSSTransition key={index} classNames="fade" timeout={300}></CSSTransition>
+    =then in the global css will have classes named :
+    .fade-enter {}
+    .fade-enter-active {}
+    .fade-exit {}
+    .fade-exit-active{}
+    for different state of the component.
